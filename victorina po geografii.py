@@ -57,7 +57,9 @@ def ask_question(level, chat_id, question_index):
         bot.send_message(chat_id, current_question['question'], reply_markup=markup)
         bot.register_next_step_handler_by_chat_id(chat_id, lambda message: check_answer(message, level, question_index))
     else:
-        bot.send_message(chat_id, "Молодец! Ты ответил на все вопросы этого уровня.")
+        bot.send_message(chat_id, "Молодец,если ты ответил на все вопросы этого уровня,если на два то хорошо"
+                                  ",если на один то мог быть и лучше,а если на все не ответил"
+                                  "то тебе надо подучить географию.")
 
 
 # Проверка ответа
